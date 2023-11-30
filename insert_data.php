@@ -8,16 +8,7 @@ include_once 'util.php';
 $val=$_GET["dist"];
 
 //$val="10";
-insert_in_db($val);
-
-global $dia, $height;
-$water_level= $height-$x_cm;
-$water_level= round($water_level,1);
-
-$volume=calculate_volume($dia,$water_level);
-
-$str="&value=".$water_level;
-echo "$str";
+insert_in_db($val);  
 
 function insert_in_db($val){   
    echo"<p>Inserting value <b>$val</b> in database</p>";
